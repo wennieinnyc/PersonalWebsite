@@ -25,6 +25,9 @@ function Particle() {
           size: {
             value: 1,
           },
+          color: {
+            value: "#000000", // Set the color to black
+          },
           opacity: {
             anim: {
               enable: true,

@@ -16,6 +16,8 @@ import ScrollToTop from "./components/ScrollToTop";
 import "./style.css";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import WhatSub from "./components/Projects/WhatSub";
+import Weather from "./components/Projects/Weather";
 
 function App() {
   const [load, upadateLoad] = useState(true);
@@ -30,7 +32,7 @@ function App() {
 
   return (
     <Router>
-      <Preloader load={load} />
+      {/* <Preloader load={load} /> */}
       <div className="App" id={load ? "no-scroll" : "scroll"}>
         <Navbar />
         <ScrollToTop />
@@ -39,6 +41,8 @@ function App() {
           <Route path="/project" element={<Projects />} />
           <Route path="/about" element={<About />} />
           <Route path="/resume" element={<Resume />} />
+          <Route path="/project/whatsub" element={<WhatSub />} />
+          <Route path="/project/weather" element={<Weather />} />
           <Route path="*" element={<Navigate to="/"/>} />
         </Routes>
         <Footer />
